@@ -1,3 +1,6 @@
+
+
+
 export let weather_data = [
 	{
 		"city_code": "127947",
@@ -30,8 +33,7 @@ export let weather_data = [
 				"date": "Febrero, 12, 2023",
 				"temperature": {
 					"min": "24 ℃",
-					"max": "31 ℃"
-				},
+					"max": "31 ℃"},
 				"icon": "water_drop"
 			},
 			{
@@ -40,8 +42,7 @@ export let weather_data = [
 				"date": "Febrero, 13, 2023",
 				"temperature": {
 					"min": "24 ℃",
-					"max": "31 ℃"
-				},
+					"max": "31 ℃"},
 				"icon": "water_drop"
 			},
 			{
@@ -50,8 +51,7 @@ export let weather_data = [
 				"date": "Febrero, 14, 2023",
 				"temperature": {
 					"min": "24 ℃",
-					"max": "31 ℃"
-				},
+					"max": "31 ℃"},
 				"icon": "water_drop"
 			},
 			{
