@@ -2,10 +2,7 @@
 
 
 
-
 import { weather_data } from './data.js';
-
-
 
 
 let loadDayForecastData = (data) => {
@@ -40,15 +37,24 @@ let loadDayForecastData = (data) => {
     let onChange = function() {
         let valores = element_1.value
         let texto = element_1 .options[element_1.selectedIndex].text    
-    }
+        
+        console.log(valores)
 
+        //prueba con filter para reducir el codigo
+        //insertar todo lo que hay dfesde la linea 55
+        for (let i of data){
+            if (i["city"] === valores){
+                console.log(i)
+            }
+        }
+    }
 
     element_1.onchange = onChange;
 
 
     let {city: ciudad, date: dia, maxtemperature: max_tempt,
         mintemperature: min_tempt, cloudiness: cloud, wind: wd, 
-        rainfall: rain, forecast_today: today, forecast_week: week} = data[1];
+        rainfall: rain, forecast_today: today, forecast_week: week} = ciudad_1;
     
     let message_ciudad = `<h5 id="city" class="text-golden"> ${ciudad} </h5>`;
     let message_date = `<h5 id="date" class="text-golden text-sm  opacity-8 mb-0">${dia}</h5>`;
@@ -135,7 +141,7 @@ let loadDayForecastData = (data) => {
 
 let loadWeekForecastData = (data_2, fn) => {
 	
-    let function_today = fn(data_2) //fn(weather-data , week)
+    let function_today = fn(data_2) //fn(weather-data , function_dayforecast)
 
 
     let element = document.getElementById("loadinfo");
